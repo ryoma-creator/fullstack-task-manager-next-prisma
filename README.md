@@ -17,6 +17,36 @@ MYSQL_DATABASE=taskmanager_db
 DATABASE_URL="mysql://root:your_password@localhost:3306/taskmanager_db"
 ```
 
+### Starting the Database
+Start MySQL with Docker Compose:
+
+```bash
+docker-compose up -d
+```
+
+### Viewing the Database
+
+#### Option 1: Prisma Studio (Recommended)
+Prisma Studio provides a modern web interface to view and edit your database:
+
+```bash
+npm run db:studio
+```
+
+Then open [http://localhost:5555](http://localhost:5555) in your browser.
+
+#### Option 2: phpMyAdmin
+phpMyAdmin is included in Docker Compose. After starting the containers:
+
+```bash
+docker-compose up -d
+```
+
+Open [http://localhost:8080](http://localhost:8080) in your browser and login with:
+- Server: `mysql`
+- Username: `root`
+- Password: (your `MYSQL_ROOT_PASSWORD` from `.env`)
+
 ## Getting Started
 
 First, run the development server:
