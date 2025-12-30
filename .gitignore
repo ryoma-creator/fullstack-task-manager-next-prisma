@@ -41,3 +41,24 @@ yarn-error.log*
 next-env.d.ts
 
 /app/generated/prisma
+
+
+# environment variables
+.env
+
+# node
+node_modules/
+.next/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+
+printf "\n.env*\n!.env.example\n" >> .gitignore
+
+.env*
+!.env.example

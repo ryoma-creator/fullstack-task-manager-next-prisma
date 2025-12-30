@@ -1,5 +1,22 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Setup (Local)
+
+### Prerequisites
+- Node.js (LTS)
+- Docker + Docker Compose
+- MySQL (runs via Docker)
+- Prisma
+
+### Environment Variables
+Create a `.env` file in the project root (do not commit it):
+
+```env
+MYSQL_ROOT_PASSWORD=your_password
+MYSQL_DATABASE=taskmanager_db
+DATABASE_URL="mysql://root:your_password@localhost:3306/taskmanager_db"
+```
+
 ## Getting Started
 
 First, run the development server:

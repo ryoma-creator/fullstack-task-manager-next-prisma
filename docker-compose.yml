@@ -1,8 +1,8 @@
 services:
   mysql:
     image: mysql:8.0
-    container_name: ${container_name}
-    restart: always  # ← 自動起動
+    container_name: taskmanager_mysql
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
@@ -10,3 +10,6 @@ services:
       - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
