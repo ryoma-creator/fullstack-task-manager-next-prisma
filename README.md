@@ -1,12 +1,60 @@
+# Fullstack Task Manager (Learning Project)
+
+## Overview
+
+This is a full-stack learning project built with **Next.js (App Router)**,
+**Prisma**, and **MySQL**.
+
+The goal of this project is not just to build a Todo app,
+but to understand how **server-side APIs**, **database access**, and
+**client-side UI** work together step by step.
+
+The project is intentionally developed **from the backend first**,
+verifying APIs before building UI.
+
+---
+
+## Tech Stack
+
+- Next.js (App Router)
+- TypeScript
+- Prisma
+- MySQL (Docker)
+- REST-style API (Route Handlers)
+
+---
+
+## Current Progress
+
+### Implemented
+
+- MySQL database setup using Docker
+- Prisma schema design and migrations
+- Prisma Client integration
+- Task model with status enum (`TODO`, `IN_PROGRESS`, `DONE`)
+- API endpoints:
+  - `GET /api/tasks`
+  - `POST /api/tasks`
+- API testing without UI (browser / curl)
+
+### In Progress / Next Steps
+
+- Accept request body in POST `/api/tasks`
+- Build minimal UI to display tasks
+- Form handling and validation
+- State management
+
+---
+
 ## Setup (Local)
 
 ### Prerequisites
+
 - Node.js (LTS)
 - Docker + Docker Compose
-- MySQL (runs via Docker)
-- Prisma
 
 ### Environment Variables
+
 Create a `.env` file in the project root (do not commit it):
 
 ```env
