@@ -11,5 +11,5 @@ if (process.env.NODE_ENV !== "production") {
   globalForPrisma.prisma = prisma;
 }
 
-//「公式ドキュメントと Next.js + Prisma の定番パターンを参考にしています」
-//「目的は開発中に PrismaClient が増殖するのを防ぐためです」
+
+
