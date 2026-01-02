@@ -24,7 +24,8 @@ verifying APIs before building UI.
 
 ### Architecture Flow
 
-```
+Where TypeScript Exists (and Where It Doesn’t)
+
 ┌──────────────┐
 │ schema.prisma│   ← You write this
 └──────┬───────┘
