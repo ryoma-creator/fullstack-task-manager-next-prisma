@@ -52,7 +52,16 @@ Where TypeScript Exists (and Where It Doesn’t)
 ┌──────────────────┐
 │ DB (MySQL)       │  ← No TS
 └──────────────────┘
-```
+
+
+### Type Safety Boundaries
+
+TypeScript exists only at compile time and is erased at runtime.
+When data crosses the network boundary (Server → Frontend),
+it is serialized as JSON, so type information is lost.
+
+Type safety must be re-established on the client side
+(e.g. with shared types, validation, or tools like Zod / tRPC).
 
 ---
 
