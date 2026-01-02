@@ -22,6 +22,37 @@ verifying APIs before building UI.
 - MySQL (Docker)
 - REST-style API (Route Handlers)
 
+### Architecture Flow
+
+```
+┌──────────────┐
+│ schema.prisma│   ← You write this
+└──────┬───────┘
+       │  prisma generate
+       ▼
+┌────────────────────────┐
+│ Prisma Client (TS)      │  ← Auto-generated (don't edit)
+│ ・Task type            │
+│ ・findMany(): Task[]   │
+└──────┬─────────────────┘
+       │
+       ▼
+┌──────────────────┐
+│ Server (Route)    │  ← Write TS or optional
+│ prisma.task.findMany()
+└──────┬───────────┘
+       │ JSON
+       ▼
+┌──────────────────┐
+│ Frontend         │  ← TS required (boundary)
+└──────────────────┘
+       │
+       ▼
+┌──────────────────┐
+│ DB (MySQL)       │  ← No TS
+└──────────────────┘
+```
+
 ---
 
 ## Current Progress
